@@ -1,5 +1,10 @@
 # Com.H.Web.UI.WordPasteEditor
 
+![NuGet](https://img.shields.io/nuget/v/Com.H.Web.UI.WordPasteEditor?color=blue)
+![.NET Framework](https://img.shields.io/badge/.NET_Framework-4.8.1-purple?logo=dotnet)
+![Zero Client Dependencies](https://img.shields.io/badge/Client_Dependencies-0-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 An ASP.NET Web Forms server control that provides a rich-text editor with **automatic Microsoft Word paste cleanup**.
 
 Under the hood, this control wraps the [word-paste-editor](https://github.com/H7O/word-paste-editor) client-side library — a zero-dependency JavaScript editor that intercepts paste/drop events and sanitizes Word HTML while preserving meaningful formatting.
@@ -99,4 +104,4 @@ The client-side JavaScript is based on the [word-paste-editor](https://github.co
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) © Hussein Al Bayati
