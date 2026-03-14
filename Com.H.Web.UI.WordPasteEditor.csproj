@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net481</TargetFramework>
+    <RootNamespace>Com.H.Web.UI.WordPasteEditor</RootNamespace>
+    <AssemblyName>Com.H.Web.UI.WordPasteEditor</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <LangVersion>latest</LangVersion>
+    <Deterministic>true</Deterministic>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <!-- NuGet package metadata -->
+  <PropertyGroup>
+    <PackageId>Com.H.Web.UI.WordPasteEditor</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Hussein Al Bayati</Authors>
+    <Company>Hussein Al Bayati</Company>
+    <Copyright>Copyright © Hussein Al Bayati 2026</Copyright>
+    <Description>ASP.NET Web Forms server control that provides a rich-text editor with automatic Microsoft Word paste cleanup. Wraps the word-paste-editor client library to sanitize pasted Word HTML while preserving meaningful formatting (tables, fonts, colors, lists, images).</Description>
+    <PackageTags>aspnet;webforms;editor;word;paste;cleanup;html;sanitize;rich-text;server-control</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/H7O/Com.H.Web.UI.WordPasteEditor</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/H7O/Com.H.Web.UI.WordPasteEditor.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>nuget.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <!-- Debugging: SourceLink + embedded PDB -->
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <!-- Embedded web resources (JS / CSS) -->
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\word-cleaner.js" LogicalName="Com.H.Web.UI.WordPasteEditor.Scripts.word-cleaner.js" />
+    <EmbeddedResource Include="Scripts\word-paste-editor.js" LogicalName="Com.H.Web.UI.WordPasteEditor.Scripts.word-paste-editor.js" />
+    <EmbeddedResource Include="Scripts\wpe-bootstrap.js" LogicalName="Com.H.Web.UI.WordPasteEditor.Scripts.wpe-bootstrap.js" />
+    <EmbeddedResource Include="Styles\wpe-editor.css" LogicalName="Com.H.Web.UI.WordPasteEditor.Styles.wpe-editor.css" />
+  </ItemGroup>
+
+  <!-- NuGet pack extras -->
+  <ItemGroup>
+    <None Include="nuget.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <!-- Framework references -->
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+
+  <!-- SourceLink for GitHub -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.*" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
